@@ -1,0 +1,30 @@
+<div class="container-fluid shadow p-3 mt-3">
+  <h3 class="mt-3 mb-3 text-center">Formulario</h3>
+  <form (submit)="id>0?updateUser():addUser()" [formGroup]="userForm">
+    <div class="form-floating mb-3">
+        <input type="text" formControlName="name" class="form-control" id="nameInput" placeholder="John Doe">
+        <label for="nameInput">Nombre</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="text" formControlName="username" class="form-control" id="userInput" placeholder="John127">
+        <label for="userInput">Usuario</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="email" formControlName="email" class="form-control" id="emailInput" placeholder="John@gmail.com">
+        <label for="emailInput">Correo</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="text" formControlName="phone" class="form-control" id="phoneInput" placeholder="3224564325">
+        <label for="phoneInput">Teléfono</label>
+      </div>
+
+      <div class="d-grid gap-2">
+      <button type="submit" class="btn" [ngClass]="id>0?'btn-info':'btn-success'">
+        <fa-icon [icon]="id>0?faPen:faPlus"></fa-icon>
+        {{id>0?'Actualizar':'Registrar'}}</button>
+    </div>
+  </form>
+</div>
